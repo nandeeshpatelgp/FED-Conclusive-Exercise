@@ -1,0 +1,128 @@
+body{
+	background-color:#e2e2e2;
+}
+header{
+	width:100%;
+	position:fixed;
+	height:50px;
+	background-color:#ccc;
+	overflow:hidden;
+	z-index:2;
+	box-sizing:border-box;
+}
+
+.page-content{
+	padding-top:50px;
+	max-width: 100%;
+}
+
+.page-content .main-carousel{
+	height:400px;
+	overflow:hidden;
+	position:relative;
+	z-index:1;
+}
+
+.page-content .main-carousel .carousel-next,
+.page-content .main-carousel .carousel-prev{
+	position:absolute;
+	top:50%;
+	padding:20px;
+	background-color:rgba(200,200,200,1);
+	cursor:pointer;
+	margin-top:-25px;
+	z-index: 2;
+}
+
+.page-content .main-carousel .carousel-next{
+	right:0;
+}
+
+.page-content .main-carousel .carousel-prev{
+	left:0;
+}
+
+.page-content .main-carousel .carousel-cells{
+	width:99999px;
+	height:100%;
+
+}
+
+.page-content .main-carousel .carousel-cells article{
+	width:100vw;
+	height:100%;
+	float:left;
+	display:flex;
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+.page-content .main-carousel .carousel-cells article div{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.page-header{
+	padding: 15px 10px;
+}
+
+.page-header nav{
+	float: right;
+}
+.page-header nav li{
+	display: inline-block;
+	min-width: 50px;
+	padding: 3px 0;
+	background-color:#ddd;
+	border-radius: 3px;
+	text-align: center;
+	margin-right: -3px;
+	cursor: pointer;
+}
+.page-header .logo{
+	font-size: 150%;
+}
+
+.carousel-cells .slide-text h1{
+	font-size: 300%;
+}
+.page-content .main-carousel .carousel-cells article{
+	position: relative;
+	transition: margin 1s;
+}
+
+.page-content .main-carousel .carousel-cells article{
+	margin-left: -100vw;
+}
+.page-content .main-carousel .carousel-cells .active,
+.page-content .main-carousel .carousel-cells .active ~ article{
+	margin-left: 0vw;
+}
+
+.page-content .main-carousel .carousel-cells article{
+	background-image: url('../img/slide-background.jpg')
+}
+.column-content h1{
+	font-size: 1.5rem;
+	margin: 5px 0;
+}
+.column-content{
+	padding: 10px;
+}
+.column-content .list-block h3{
+	margin-bottom: 15px;
+}
+.column-content .list-block{
+	width: 33.33%;
+	float: left !important;
+	margin-top: 15px;
+}
+.column-content .list-block ul{
+	list-style-type: none;
+}
+@media screen and (min-width: 767px){
+	.column-content .list-block{
+		width: 25%;
+		float: left !important;
+	}
+}
